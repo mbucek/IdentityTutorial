@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~ngx-toastr/toastr";
+
+.ajs-button {
+  @extend .btn;
+}
+
+.ajs-ok {
+  @extend .btn-primary;
+}
+
+.ajs-cancel {
+  @extend .btn-dark;
+}
+
+.ajs-input {
+  @extend .form-control;
+}
+
+#toast-container > div {
+  opacity:1;
+}

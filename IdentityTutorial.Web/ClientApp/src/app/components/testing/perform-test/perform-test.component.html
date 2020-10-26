@@ -1,0 +1,18 @@
+<div>
+  <h1>Bereich für User und Admin</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <th>Datum</th>
+    <th>Temp.</th>
+    <th>Info</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of this.weatherForecasts">
+      <td>{{forecast.date}}</td>
+      <td>{{forecast.temperatureC}}</td>
+      <td>{{forecast.summary}}</td>
+    </tr>
+  </tbody>
+</table>

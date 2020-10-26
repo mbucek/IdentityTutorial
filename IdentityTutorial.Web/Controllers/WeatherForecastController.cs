@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityTutorial.Web.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -24,6 +26,7 @@ namespace IdentityTutorial.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = Policy.User)]  //Für User und Administratoren gültig
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
